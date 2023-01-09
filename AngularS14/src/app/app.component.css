@@ -1,0 +1,8 @@
+h3{
+    font-size: xx-large;
+    color: rgba(70, 105, 180, 0.904);
+}
+button{
+    position: relative;
+    top: 2rem;
+}

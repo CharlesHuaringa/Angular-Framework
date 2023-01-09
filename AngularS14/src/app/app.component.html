@@ -1,0 +1,22 @@
+<div class="row ny-3">
+  <form (ngSubmit)="onSubmit(contactForm.value)" #contactForm="ngForm">
+  <h3>Registro de Personas</h3>
+  <app-padre *ngIf="datos" [values]="datos"></app-padre>
+  <div class="mb-3">
+  <label for="nombre" class="form-label">Nombre:</label>
+  <input type="text" name="nombre" class="form-control" id="nombre" [(ngModel)]="model.nombre">
+  </div>
+  <div class="mb-3">
+  <label for="dni" class="form-label">DNI:</label>
+  <input type="number" name="dni" class="form-control" id="dni" [(ngModel)]="model.dni">
+  </div>
+  <label for="estado_civil">Estado Civil:</label>
+<select class="form-select" aria-label="Default select example" name="estado" [(ngModel)]="model.estado_civil">
+    <option value="soltero">Soltero</option>
+    <option value="casado">Casado</option>
+    <option value="divorciado">Divorciado</option>
+    <option value="viudo">Viudo</option>
+  </select> <br> <br> <br>
+  <button type="submit" class="btn btn-success">Enviar</button>
+  </form>
+  </div>
